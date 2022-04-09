@@ -1,8 +1,8 @@
-db = db.getSiblingDB('superhero');
+db = db.getSiblingDB('superheros');
 
-db.createCollection('superheros');
+db.createCollection('heros');
 
-db.superheros.insertMany([
+db.heros.insertMany([
  {
     name: 'Batman',
     realName: 'Bruce Wayne',
