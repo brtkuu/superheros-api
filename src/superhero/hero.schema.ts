@@ -5,6 +5,9 @@ export type HeroDocument = Hero & Document;
 @Schema()
 export class Hero {
   @Prop()
+  id: number;
+
+  @Prop()
   name: string;
 
   @Prop()

@@ -7,8 +7,11 @@ import { Model } from 'mongoose';
 export class HeroService {
   constructor(@InjectModel(Hero.name) private heroModel: Model<HeroDocument>) {}
 
-  async getHeros(): Promise<Hero[]> {
-    console.log(this.heroModel.collection)
+  async getAllHeros(): Promise<Hero[]> {
     return this.heroModel.find().exec();
+  }
+
+  async getHeroById(id: number): Promise<Hero> {
+    return this.heroModel.findOne({id}).exec();
   }
 }

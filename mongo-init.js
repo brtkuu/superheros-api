@@ -4,6 +4,7 @@ db.createCollection('heros');
 
 db.heros.insertMany([
  {
+    id: 1, 
     name: 'Batman',
     realName: 'Bruce Wayne',
     height: `6' 2"`,
@@ -11,6 +12,7 @@ db.heros.insertMany([
     city: "Gotham City"
   },
   {
+    id: 2,
     name: 'Iron Man',
     realName: "Tony Stark",
     height: `5' 9"`,
@@ -18,6 +20,7 @@ db.heros.insertMany([
     city: 'Los Angeles, California'
   },
   {
+    id: 3,
     name: 'Spiderman',
     realName: 'Peter Parker',
     height: `5' 10"`,
