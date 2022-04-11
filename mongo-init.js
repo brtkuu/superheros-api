@@ -13,7 +13,7 @@ db.heros.insertMany([
   },
   {
     id: 2,
-    name: 'Iron Man',
+    name: 'Ironman',
     realName: "Tony Stark",
     height: `5' 9"`,
     weight: "185 lbs(84 kg)",

@@ -14,4 +14,11 @@ export class HeroService {
   async getHeroById(id: number): Promise<Hero> {
     return this.heroModel.findOne({id}).exec();
   }
+
+  async filterHeros(filters: Record<string, string> | {}): Promise<Hero[]> {
+    if (filters !== {}) {
+      return this.heroModel.find(filters).exec();
+    }
+    return this.heroModel.find().exec();
+  }
 }
