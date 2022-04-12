@@ -15,9 +15,9 @@ export class HeroService {
     return this.heroModel.findOne({id}).exec();
   }
 
-  async filterHeros(filters: Record<string, string> | {}): Promise<Hero[]> {
+  async filterHeros(filters: Record<string, string> | {}, sortBy: Record<string, string | number>): Promise<Hero[]> {
     if (filters !== {}) {
-      return this.heroModel.find(filters).exec();
+      return this.heroModel.find(filters).sort(sortBy).exec();
     }
     return this.heroModel.find().exec();
   }
